@@ -1,38 +1,68 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  box-sizing: border-box;
+  background-color: #EEEEEE;
+}
+
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 0;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: #3BACB6;
+  padding: 0.2em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.button:hover {
+  background-color: #2F8F9D;
+  cursor: pointer;
+}
+
+.list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  min-height: 30px;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.list-item {
+  list-style: none;
+  margin-left: 5px;
+  padding: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.list-item:hover {
+  cursor: pointer;
+  background-color: #ff4243;
+}
+
+input {
+  border: 2px solid black;
+  display: inline-block;
+  font-size: inherit;
+  background-color: inherit;
+  margin: 10px;
+  padding: 0.2em;
+}
+
+@media screen and (min-width: 840px) {
+  body {
+    font-size: 1.5rem;
   }
 }
