@@ -4,7 +4,7 @@ function Result({ listA, listB }) {
   return (
     <div>
       <h2>Computed Results</h2>
-      <h3>Items present in A</h3>
+      <h3>Items present only in A</h3>
       <ul className="list">
         {makeExclusive(listA).map((item) => (
           <li key={item.id} className="list-item">
@@ -12,7 +12,7 @@ function Result({ listA, listB }) {
           </li>
         ))}
       </ul>
-      <h3>Items present in B</h3>
+      <h3>Items present only in B</h3>
       <ul className="list">
         {makeExclusive(listB).map((item) => (
           <li key={item.id} className="list-item">

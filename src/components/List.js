@@ -33,7 +33,7 @@ function List({ name, list, setList }) {
       alert("Item name can't be empty");
       return;
     }
-    setList([...list, { id: Date.now(), name: text }]);
+    setList([...list, { id: Date.now(), name: text.trim() }]);
     setText("");
   }
 
