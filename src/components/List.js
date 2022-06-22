@@ -18,7 +18,7 @@ function List({ name, list, setList }) {
           <li
             key={item.id}
             id={item.id}
-            className="list-item"
+            className="list-item editable"
             onClick={removeItem}
           >
             {item.name} <FontAwesomeIcon icon={faTrashCan} size="xs" />

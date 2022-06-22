@@ -6,7 +6,7 @@ function Result({ listA, listB }) {
       <h2>Computed Results</h2>
       <h3>Items present in A</h3>
       <ul className="list">
-        {listA.map((item) => (
+        {makeExclusive(listA).map((item) => (
           <li key={item.id} className="list-item">
             {item.name}
           </li>
@@ -14,7 +14,7 @@ function Result({ listA, listB }) {
       </ul>
       <h3>Items present in B</h3>
       <ul className="list">
-        {listB.map((item) => (
+        {makeExclusive(listB).map((item) => (
           <li key={item.id} className="list-item">
             {item.name}
           </li>
@@ -42,6 +42,13 @@ function Result({ listA, listB }) {
       </ul>
     </div>
   );
+
+  function makeExclusive(list) {
+    let otherList = list === listA ? listB : listA;
+    let otherListItems = new Set();
+    for (let { name } of otherList) otherListItems.add(name);
+    return list.filter(({ name }) => !otherListItems.has(name));
+  }
 
   function findIntersection() {
     let intersection = [];
